@@ -1,0 +1,47 @@
+.side-view-mark {
+    height: 93vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-right: 1px solid black;
+    position: relative;
+    z-index: 1;
+}
+
+.resize-handle {
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -5px;
+    cursor: col-resize;
+}
+
+.main-view-mark {
+    overflow-y: auto;
+    height: 93vh; 
+    box-sizing: border-box; 
+    position: relative;
+    z-index: 0;
+    flex-grow: 1;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: col-resize;
+    z-index: 9999;
+}
+
+.material-symbols-outlined{
+    cursor: pointer;
+}
+.material-symbols-outlined:hover{
+    color: red;
+}
+
+.container{
+    margin-top: 25px;
+}
