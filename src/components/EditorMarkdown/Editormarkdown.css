@@ -2,9 +2,10 @@
     height: 93vh;
     overflow-y: auto;
     overflow-x: hidden;
-    border-right: 1px solid black;
+    border-right: 1px solid lightgray;
     position: relative;
     z-index: 1;
+    max-width: 300px;
 }
 
 .resize-handle {
@@ -44,4 +45,13 @@
 
 .container{
     margin-top: 25px;
+}
+
+.MD-editor{
+    margin-top: 20px;
+}
+
+.arrow-file-system{
+    padding: 10px;
+    margin-right: 16px;
 }

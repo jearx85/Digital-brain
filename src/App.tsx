@@ -4,10 +4,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import RightBar from './components/SideBar/SideBar'; 
 import Home from './components/Home/Home'; 
 import EditorMark from './components/EditorMarkdown/EditorMark';
+import MainNavBar from './components/NavBar/MainNavBar';
 
 const App = () => {
   return (
     <BrowserRouter>
+      < MainNavBar />
       <div style={{ display: 'flex', height: '100%' }}>
         {/* Barra lateral */}
         <RightBar />
