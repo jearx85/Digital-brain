@@ -3,8 +3,9 @@
   flex-direction: column;
   width: 58px;
   height: 100vh;
-  background-color: #2b3035;
-  color: #c5c3c3;
+  /* background-color: #2b3035; */
+  background-color: lightgray;
+  color: black;
   padding: 10px;
   font-size: 12px;
 }
@@ -18,9 +19,9 @@
 }
 
 .sidebar-icon {
-  font-size: 24px;
+  font-size: 18px;
   margin-bottom: 5px;
 }
 .sidebar-icon:hover {
-  color: white;
+  color: rgb(32, 237, 22);
 }
