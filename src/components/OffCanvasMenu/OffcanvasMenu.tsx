@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { IoChatboxOutline, IoCalendarOutline, IoChatbox } from "react-icons/io5";
 import './OffcanvasMenu.css';
-import MyCalendar from '../../MyCalendar/myCalendar';
-import AIChat from '../../AIChat/AIChat';
+import MyCalendar from '../MyCalendar/myCalendar';
+import AIChat from '../AIChat/AIChat';
 
 export default function OffcanvasMenu() {
   const [activeComponent, setActiveComponent] = useState("ChatboxOutline");

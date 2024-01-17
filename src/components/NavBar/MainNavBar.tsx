@@ -1,5 +1,5 @@
 // import React from 'react';
-import OffcanvasMenu from '../EditorMarkdown/OffCanvasMenu/OffcanvasMenu';
+import OffcanvasMenu from '../OffCanvasMenu/OffcanvasMenu';
 import './MainNavBar.css';
 
 export default function MainNavBar() {

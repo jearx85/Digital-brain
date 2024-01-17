@@ -24,21 +24,3 @@
     cursor: pointer;
     background-color: aqua;
 }
-
-.response-chat{
-    display: flex;
-    padding: 10px;
-    /* align-items: center;
-    justify-content: center; */
-    height: 75%;
-    border: 1px solid lightgray;
-    border-radius: 10px;
-}
-
-.request-chat-area{
-    border: 1px solid lightgray;
-    margin-top:16px;
-    border-radius: 10px;
-    width: 100%;
-}
-
