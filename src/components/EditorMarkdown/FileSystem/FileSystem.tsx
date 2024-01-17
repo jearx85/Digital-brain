@@ -6,14 +6,14 @@ export default function FileSystem() {
   return (
     <div>
         <ul className="header-file-system">
-            <div className="nav-item">
-                <VscNewFolder  className="nav-icon" />
+            <button className="filesystem-nav-item">
+                <VscNewFolder  className="filesystem-nav-icon" />
             
-            </div>
-            <div className="nav-item">
-                <VscNewFile className="nav-icon" />
+            </button>
+            <button className="filesystem-nav-item">
+                <VscNewFile className="filesystem-nav-icon" />
              
-            </div>
+            </button>
         </ul>
           <hr />
           <p>Carpeta1</p>

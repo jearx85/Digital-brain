@@ -8,23 +8,26 @@ import MainNavBar from './components/NavBar/MainNavBar';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      < MainNavBar />
-      <div style={{ display: 'flex', height: '100%' }}>
-        {/* Barra lateral */}
-        <RightBar />
-
-        {/* Área central */}
-        <div style={{ flex: 1, padding: '20px', overflowY: 'auto' }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/Home" element={<Home />} />
-            <Route path="/Editor" element={<EditorMark />} />
-         
-          </Routes>
-        </div>
+      <BrowserRouter >
+      <div className="navbarmain">
+        < MainNavBar />
       </div>
-    </BrowserRouter>
+        <div className="RightBar" style={{ display: 'flex', height: '100%'}}>
+          {/* Barra lateral */}
+          <RightBar />
+
+
+          {/* Área central */}
+          <div style={{ flex: 1, padding: '20px', overflowY: 'auto' }}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/Home" element={<Home />} />
+              <Route path="/Editor" element={<EditorMark />} />
+          
+            </Routes>
+          </div>
+        </div>
+      </BrowserRouter>
   );
 };
              

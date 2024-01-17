@@ -16,12 +16,16 @@
   align-items: center;
   margin-bottom: 20px;
   cursor: pointer;
+  border: none;
+  background-color: lightgray;
+}
+
+.sidebar-item:hover {
+  color: aqua;
 }
 
 .sidebar-icon {
   font-size: 18px;
   margin-bottom: 5px;
 }
-.sidebar-icon:hover {
-  color: rgb(32, 237, 22);
-}
+

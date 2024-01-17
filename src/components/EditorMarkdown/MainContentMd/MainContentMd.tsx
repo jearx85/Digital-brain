@@ -15,21 +15,21 @@ export default function MainContentMd() {
     <div>
         <div className="navtabs row">
             <ul className="nav nav-tabs">
-            <span className="arrow-file-system material-symbols-outlined" onClick={showFileSystem}>
-                chevron_left
-            </span>
-            <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item">
-                <a className="nav-link disabled" aria-disabled="true">Disabled</a>
-            </li>
+                <span className="arrow-file-system material-symbols-outlined" onClick={showFileSystem}>
+                    chevron_left
+                </span>
+                <li className="nav-item">
+                    <a className="nav-link active" aria-current="page" href="#">Active</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Link</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link" href="#">Link</a>
+                </li>
+                <li className="nav-item">
+                    <a className="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>
             </ul>
         </div>
         <div className="MD-editor row">

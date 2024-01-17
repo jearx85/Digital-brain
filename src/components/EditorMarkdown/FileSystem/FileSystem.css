@@ -1,5 +1,16 @@
 .header-file-system{
-    display: flex;
-    padding: 0px;
+    display: block;
+    padding: 10px;
     justify-content: space-between;
+    background-color: lightgray;
+    border-radius: 20px;
+}
+
+.filesystem-nav-item{
+    border: none;
+    background-color: lightgray;
+    border-radius: 50px;
+}
+.filesystem-nav-item:hover{
+    background-color: aqua;
 }

@@ -1,5 +1,5 @@
 // import React from "react";
-import { FaHome, FaCode, FaDatabase, FaCog, FaFileCode } from "react-icons/fa";
+import { IoHomeOutline, IoPencilOutline, IoSettingsOutline, IoServerOutline } from "react-icons/io5";
 import "./SideBar.css";
 import { useNavigate } from 'react-router-dom';
 
@@ -15,26 +15,22 @@ const RightBar = () => {
 
   return (
     <div className="sidebar">
-      <div className="sidebar-item" onClick={handleClickHome}>
-        <FaHome className="sidebar-icon" />
+      <button className="sidebar-item" onClick={handleClickHome}>
+        <IoHomeOutline className="sidebar-icon" />
         Home
-      </div>
-      <div className="sidebar-item" onClick={handleClickEditor}>
-        <FaCode className="sidebar-icon" />
-        Editor
-      </div>
-      <div className="sidebar-item">
-        <FaDatabase className="sidebar-icon" />
+      </button>
+      <button className="sidebar-item" onClick={handleClickEditor}>
+        <IoPencilOutline  className="sidebar-icon" />
+        Notes
+      </button>
+      <button className="sidebar-item">
+        <IoServerOutline className="sidebar-icon" />
         Database
-      </div>
-      <div className="sidebar-item">
-        <FaCog className="sidebar-icon" />
+      </button>
+      <button className="sidebar-item">
+        <IoSettingsOutline className="sidebar-icon" />
         Settings
-      </div>
-      <div className="sidebar-item">
-        <FaFileCode className="sidebar-icon" />
-        Files
-      </div>
+      </button>
     </div>
   ); 
 }
