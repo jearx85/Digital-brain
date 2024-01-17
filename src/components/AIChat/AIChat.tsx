@@ -1,31 +1,61 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './AIChat.css';
+
+const response = ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. In diam ipsum, vestibulum a vulputate id, porta at dui. Cras rutrum orci non pretium convallis. Phasellus aliquam tortor fermentum justo interdum, vel mattis nisl pharetra. Sed commodo turpis eget molestie suscipit. Nullam sed felis at nunc sagittis pharetra. Duis eget luctus eros."];
 
 export default function AIChat() {
   const [chatMessage, setChatMessage] = useState('');
+  const [displayedText, setDisplayedText] = useState('');
+  const [wordIndex, setWordIndex] = useState(0);
   const chatTextAreaRef = useRef<HTMLTextAreaElement>(null);
 
   const handleSendClick = () => {
-    // Obtenemos el valor del textarea utilizando la referencia
     const message = chatTextAreaRef.current?.value;
-
-    // Actualizamos el estado con el contenido del textarea
     setChatMessage(message || '');
 
-    if (chatTextAreaRef.current) {
-      chatTextAreaRef.current.value = '';
+    if (message && message.trim() !== '') {
+      setChatMessage(message);
+      setDisplayedText(''); // Reinicia el texto mostrado
+      setWordIndex(0); // Reinicia el índice de palabras
+
+      if (chatTextAreaRef.current) {
+        chatTextAreaRef.current.value = '';
+      }
     }
   };
+
+  useEffect(() => {
+    if (chatMessage) {
+      const words = response[0].split(/\s+/);
+
+      const interval = setInterval(() => {
+        if (wordIndex < words.length) {
+          setDisplayedText(prevText => prevText + ' ' + words[wordIndex]);
+          setWordIndex(prevIndex => prevIndex + 1);
+        } else {
+          clearInterval(interval);
+        }
+      }, 40); 
+
+      return () => clearInterval(interval); 
+    }
+  }, [chatMessage, wordIndex]);
 
   return (
     <>
       <div className="response-chat">
-        <p>{chatMessage}</p>
+        {displayedText && (
+          <div className="user-message">
+            <p>{displayedText}</p>
+          </div>
+        )}
       </div>
       <div className="request-chat d-flex">
         <textarea ref={chatTextAreaRef} className="request-chat-area" />
       </div>
-      <button className="sendBtn btn btn-primary" onClick={handleSendClick}>send</button>
+      <button className="sendBtn btn btn-primary" onClick={handleSendClick}>
+        send
+      </button>
     </>
   );
 }

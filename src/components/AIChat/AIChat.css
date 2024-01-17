@@ -1,3 +1,15 @@
 .sendBtn{
     margin-top:10px;
 }
+
+.user-message {
+    overflow: auto;
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    display: inline-block;
+    max-width: 200px;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal; /* Agrega esta propiedad para forzar el salto de línea */
+  }

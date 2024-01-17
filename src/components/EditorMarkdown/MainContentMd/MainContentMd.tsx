@@ -1,14 +1,22 @@
 import { useState } from 'react';
+
 import MDEditor from '@uiw/react-md-editor';
+import MarkdownEditor from '@uiw/react-markdown-editor';
+import Markdown from 'marked-react';
+// import Markdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
+
 import './MainContentMd.css';
 
+const mdStr = "**Hello world!!!**";
 
 export default function MainContentMd() {
-    const [value, setValue] = useState<string>("**Hello world!!!**");
+    const [markdown, setMarkdown] = useState(mdStr);
 
     function showFileSystem(){
        console.log("click")
     }
+    const markdownText = 'This ~is not~ strikethrough, but ~~this is~~!'
 
 
   return (
@@ -34,10 +42,18 @@ export default function MainContentMd() {
         </div>
         <div className="MD-editor row">
             <MDEditor
-            value={value}
-            onChange={(newValue: string | undefined) => setValue(newValue || '')}
+            value={markdown}
+            onChange={(newValue: string | undefined) => setMarkdown(newValue || '')}
             />
-            <MDEditor.Markdown source={value} style={{ whiteSpace: 'pre-wrap' }} />
+            <MDEditor.Markdown source={markdown} style={{ whiteSpace: 'pre-wrap' }} />
+            
+             {/* <MarkdownEditor
+                value={markdown}
+                height="200px"
+                onChange={(value, viewUpdate) => setMarkdown(value)}
+            /> */}
+
+            {/* <Markdown>{markdownText}</Markdown> */}
         </div>
     </div>
   )
